@@ -15,10 +15,14 @@ type todoState =
   | Todo
   | Done;
 
+type description = Some(string) | None;
+
 type todo = {
   id: int,
   name: string,
-  description: option(string),
+  description: description,
+  // or you can simply use option
+  // description: option(string),
   state: todoState,
 };
 
